@@ -158,17 +158,17 @@ html{scroll-behavior:smooth}
   </nav>
 
   <header class="hero" id="top">
-    <figure class="banner"><img src="assets/banner.webp" width="1773" height="656" alt="Three chimpanzees on green grass under a blue sky, with the Palace of Culture and Science in the background: one covers its eyes and wears a conference badge, one cups its ear, one holds a yellow microscope."></figure>
     <p class="eyebrow">Science club · Biocentrum Ochota · Warsaw · since 2013</p>
     <div class="hero-top"><img class="logo" src="assets/logo.webp" alt="Do Science! logo"><h1>Do Science<span class="bang">!</span></h1></div>
     <p class="lede">Lectures and informal discussions over a coffee or a beer with excellent scientists. We talk about their research, and about the fundamental questions of science itself.</p>
     <p class="ticket">lecture <span class="dim">→</span> career advice <span class="dim">→</span> coffee / beer with the speaker <span class="dim">→</span> SCIENCE!</p>
     <div class="facts">
       <span class="fact"><b>3 Nobel laureates</b> hosted</span>
-      <span class="fact"><b>39 meetings</b> in the archive</span>
+      <span class="fact"><b>40 meetings</b> in the archive</span>
       <span class="fact"><b>Run by</b> PhD students and postdocs</span>
       <span class="fact"><b>Institute-independent</b></span>
     </div>
+    <figure class="banner"><img src="assets/banner.webp" width="1773" height="656" alt="Three chimpanzees on green grass under a blue sky, with the Palace of Culture and Science in the background: one covers its eyes and wears a conference badge, one cups its ear, one holds a yellow microscope."></figure>
   </header>
 
   <section id="about" aria-labelledby="about-h">
@@ -258,7 +258,7 @@ html{scroll-behavior:smooth}
   <section id="archive" aria-labelledby="archive-h">
     <p class="eyebrow">Meetings</p>
     <h2 id="archive-h">Every meeting so far</h2>
-    <p class="note">Newest first. Numbers follow the original meeting numbering. Filter by year or search for a speaker, institute or topic.</p>
+    <p class="note">Newest first. Talks in 2020 and 2021 were held online. Numbers follow the original meeting numbering. Filter by year or search for a speaker, institute or topic.</p>
     <div class="filters">
       <div id="chips" class="filters" role="group" aria-label="Filter by year"></div>
       <label for="q" class="note" hidden>Search</label>
@@ -355,15 +355,16 @@ const TALKS = [
   {d:"2017-06-01", n:"", who:"Jordan Ramilowski", aff:"IIMCB, room 012", title:"Functional characterizations of long non-coding RNAs: turning ‘junk’ into a treasure trove", kind:"Lecture"},
   {d:"2017-06-20", n:"", who:"Andrzej Wierzbicki", aff:"IIMCB, hall 003", title:"Gene regulation by long non-coding RNA", kind:"Lecture"},
   {d:"2017-09-28", n:"", who:"Dominika Nowis", aff:"Laboratory of Experimental Medicine, CeNT UW · CeNT, room 4050", title:"The role of arginase-1 in antitumor immune response", kind:"Lecture"},
-  {d:"2018-01-31", n:"", who:"Duncan Smith", aff:"New York University · former PhD student of Magda Konarska · IIMCB, room 003", title:"", kind:"Lecture"},
+  {d:"2018-01-31", n:"", who:"Duncan Smith", aff:"New York University · former PhD student of Magda Konarska", title:"", kind:"Lecture"},
   {d:"2018-04-06", n:"", who:"Jacek Kolanowski", aff:"IIMCB, hall 003", title:"", kind:"Lecture"},
   {d:"2019-06-10", n:"", who:"Rhiju Das", aff:"Stanford University · first RNA Club Warsaw keynote · IIMCB", title:"RNA technologies developed through an internet-scale videogame", kind:"RNA Club × Do Science!"},
   {d:"2019-06-17", n:"", who:"Matthew Disney", aff:"Scripps Research, Florida · IIMCB, hall 003", title:"RNA Therapeutics", kind:"RNA Club × Do Science!"},
-  {d:"2020-07-03", n:"", who:"Steven Benner", aff:"Online (Zoom)", title:"The origin of life on Earth, Mars, and beyond", kind:"Online"},
-  {d:"2020-09-25", n:"", who:"Jack Horner", aff:"Paleontologist", title:"", kind:"Lecture"},
-  {d:"2020-10-30", n:"", who:"Lars Juhl Jensen", aff:"", title:"Specialization? Big dirty data.", kind:"Lecture"},
-  {d:"2020-11-22", n:"", who:"Eugene V. Koonin", aff:"", title:"Trying to understand evolution through the lens of genomics", kind:"Lecture"},
-  {d:"2021-01-22", n:"", who:"Melissa Moore", aff:"Chief Scientific Officer, Moderna", title:"mRNA as Medicine", kind:"Lecture"}
+  {d:"2020-07-03", n:"", who:"Steven Benner", aff:"Online (Zoom)", title:"The origin of life on Earth, Mars, and beyond", kind:"Lecture", online:true},
+  {d:"2020-09-25", n:"", who:"Jack Horner", aff:"Paleontologist", title:"", kind:"Lecture", online:true},
+  {d:"2020-10-30", n:"", who:"Lars Juhl Jensen", aff:"", title:"Specialization? Big dirty data.", kind:"Lecture", online:true},
+  {d:"2020-11-22", n:"", who:"Eugene V. Koonin", aff:"", title:"Trying to understand evolution through the lens of genomics", kind:"Lecture", online:true},
+  {d:"2021-01-22", n:"", who:"Melissa Moore", aff:"Chief Scientific Officer, Moderna", title:"mRNA as Medicine", kind:"Lecture", online:true},
+  {d:"2022-10-25", n:"", who:"Krzysztof Fidelis", aff:"Protein Structure Prediction Center (CASP), UC Davis", title:"Protein structure prediction in CASP: From homology modeling to solving the protein folding problem; prospects for the future.", kind:"Lecture"}
 ];
 const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const fmt = t => { if(!t.d) return "date n/a"; const [y,m,d]=t.d.split("-"); const s = +d+" "+MON[+m-1]; return t.end ? s+" – "+t.end : s; };
@@ -389,7 +390,7 @@ function render(){
     list.filter(t=>yearOf(t)===y).map(t=>`<li><time${t.d?` datetime="${t.d}"`:""}>${fmt(t)}</time><div>
       <b>${esc(t.who)}</b>${t.aff?`<div class="aff">${esc(t.aff)}</div>`:""}
       ${t.title?`<p class="title"><q>${esc(t.title)}</q></p>`:""}
-      <div class="meta">${t.n?`<span class="tag">Meeting ${t.n}</span>`:""}<span class="tag${t.kind==="Nobel laureate"?" ok":""}">${t.kind}</span></div>
+      <div class="meta">${t.n?`<span class="tag">Meeting ${t.n}</span>`:""}<span class="tag${t.kind==="Nobel laureate"?" ok":""}">${t.kind}</span>${t.online?`<span class="tag">Online</span>`:""}</div>
     </div></li>`).join("")}</ul></div>`).join("");
 }
 chips.addEventListener("click", e => { const b = e.target.closest(".chip"); if(!b) return; active = b.dataset.y; renderChips(); render(); });
