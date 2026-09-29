@@ -68,6 +68,7 @@ nav ul a:hover{color:var(--ink);background:none;box-shadow:inset 0 -3px 0 var(--
 
 section{padding-block:48px;border-top:1px solid var(--line);display:grid;gap:24px}
 .photo{margin:0;align-self:start}.photo img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}.photo figcaption{margin-top:10px;font-size:.85rem;color:var(--muted,#555);line-height:1.45;border-left:3px solid var(--yellow);padding-left:10px}.photo figcaption b{color:var(--ink,#111)}.more{margin-top:34px}
+.post{display:grid;gap:12px;max-width:68ch}.post time{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.post h3{font-family:var(--display);font-size:1.35rem;line-height:1.25;margin:0;letter-spacing:-.01em}.post p{margin:0}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
 .cols>*{min-width:0}
 .prose{display:grid;gap:14px;max-width:65ch}
@@ -147,8 +148,7 @@ html{scroll-behavior:smooth}
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#format">Format</a></li>
-      <li><a href="#nobel">Laureates</a></li>
-      <li><a href="#archive">Archive</a></li>
+      <li><a href="#news">News</a></li>
       <li><a href="#scievents">SciEvents</a></li>
       <li><a href="#team">Team</a></li>
       <li><a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club ↗</a></li>
@@ -190,6 +190,19 @@ html{scroll-behavior:smooth}
         <p><a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club Warsaw</a> started in 2016 as a spin-off of Do Science! and restarts in October 2026 as a monthly series on the Ochota Campus.</p>
       </div>
     </div>
+  </section>
+
+  <section id="news" aria-labelledby="news-h">
+    <p class="eyebrow">News</p>
+    <h2 id="news-h">Latest</h2>
+    <article class="post">
+      <time datetime="2026-09-29">29 September 2026</time>
+      <h3>We are relaunching Do Science! in Warsaw, and we need organisers</h3>
+      <p>Do Science! is a simple idea. PhD students and postdocs invite a scientist they want to hear, and the speaker gives a lecture. Afterwards comes the part we like best: a career advice talk and a beer, without the PIs.</p>
+      <p>Since 2013, when we started Do Science! with <a href="https://www.linkedin.com/in/wojciech-siwek-a3ab45287/" target="_blank" rel="noopener">Wojciech Siwek</a> and many others, we have hosted three Nobel laureates and around forty other speakers (see the <a href="#archive">full list of meetings</a>). The next round should be picked by the people who will sit in the audience.</p>
+      <p>Do Science! and <a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club Warsaw</a> can live side by side on the Ochota Campus. RNA Club brings the labs together. Do Science! is for early-career researchers who want to meet the people whose work they read.</p>
+      <p>If you are a PhD student or postdoc at IIMCB, CeNT, IBB, Nencki, or anywhere else in Warsaw, join the team. You choose the speakers. We will help with invitations and logistics, and stay out of the way. <a href="mailto:m.magnus@cent.uw.edu.pl">Shoot us a message.</a></p>
+    </article>
   </section>
 
   <section id="format" aria-labelledby="format-h">
@@ -241,7 +254,7 @@ html{scroll-behavior:smooth}
   </section>
 
   <section id="archive" aria-labelledby="archive-h">
-    <p class="eyebrow">Archive</p>
+    <p class="eyebrow">Meetings</p>
     <h2 id="archive-h">Every meeting so far</h2>
     <p class="note">Newest first. Numbers follow the original meeting numbering. Filter by year or search for a speaker, institute or topic.</p>
     <div class="filters">
