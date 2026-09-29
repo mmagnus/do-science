@@ -1,1 +1,1 @@
-do-science.org
+https://do-science.org
