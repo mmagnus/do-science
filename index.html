@@ -67,9 +67,10 @@ nav ul a:hover{color:var(--ink);background:none;box-shadow:inset 0 -3px 0 var(--
 .fact b{font-weight:600}
 
 section{padding-block:48px;border-top:1px solid var(--line);display:grid;gap:24px}
-.photo{margin:0;align-self:start}.photo img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}.photo figcaption{margin-top:10px;font-size:.85rem;color:var(--muted,#555);line-height:1.45;border-left:3px solid var(--yellow);padding-left:10px}.photo figcaption b{color:var(--ink,#111)}.more{margin-top:34px}
+.photo{margin:0;align-self:end}.photo img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}.photo figcaption{margin-top:10px;font-size:.85rem;color:var(--muted,#555);line-height:1.45;border-left:3px solid var(--yellow);padding-left:10px}.photo figcaption b{color:var(--ink,#111)}.more{margin-top:34px}
 .post{display:grid;gap:12px;max-width:68ch}.post time{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.post h3{font-family:var(--display);font-size:1.35rem;line-height:1.25;margin:0;letter-spacing:-.01em}.post p{margin:0}
-.post.feature{grid-template-columns:150px 1fr;gap:12px 24px;align-items:start;max-width:80ch}.post.feature .body{display:grid;gap:12px}.post.feature .pic{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}@media (max-width:620px){.post.feature{grid-template-columns:1fr}.post.feature .pic{max-width:160px}}
+.next.feature{grid-template-columns:150px 1fr;gap:12px 24px;align-items:start}.next.feature .body{display:grid;gap:12px}.next.feature .pic{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}@media (max-width:620px){.next.feature{grid-template-columns:1fr}.next.feature .pic{max-width:160px}}
+.btn{display:inline-block;background:var(--ink);color:var(--yellow);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:999px}.btn:hover{background:#000;color:var(--yellow);box-shadow:0 0 0 3px var(--yellow)}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
 .cols>*{min-width:0}
 .prose{display:grid;gap:14px;max-width:65ch}
@@ -179,37 +180,19 @@ html{scroll-behavior:smooth}
         <h2 id="about-h">Science Club<br>A place to discuss SCIENCE.</h2>
         <p>Do Science! is an institute-independent initiative started by PhD students and postdocs at IIMCB and Biocentrum Ochota. We invite excellent scientists, from Warsaw and from abroad, to give a lecture and then stay for an informal conversation.</p>
         <p>The mix is deliberate: Nobel laureates next to young Warsaw group leaders, ribosomes next to bats, neuroscience next to genomics. The common thread is curiosity and a room full of early-career researchers who ask questions.</p>
+        <p>Besides the lecture series we keep <a href="#scievents">SciEvents</a>, a shared calendar of bioscience events in Warsaw that anyone can add to. Over the years the club has also run journal clubs, an RNA mini-symposium, a two-week mini-course and an outing to an exhibition.</p>
+        <p><a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club Warsaw</a> started in 2016 as a spin-off of Do Science! and restarts in October 2026 as a monthly series on the Ochota Campus.</p>
       </div>
       <figure class="photo">
         <img src="assets/meeting-13.webp" alt="Meeting #13: lecture room, the projected Do Science! slide, and the group at a bar afterwards" width="1499" height="1049" loading="lazy">
         <figcaption><b>Meeting #13</b> Prof. Magda Konarska, RNA biology lab, Centre of New Technologies; 11/19/2015</figcaption>
       </figure>
     </div>
-    <div class="more">
-      <div class="prose">
-        <p class="eyebrow">More than lectures</p>
-        <h2>SciEvents, trips, mini-courses</h2>
-        <p>Besides the lecture series we keep <a href="#scievents">SciEvents</a>, a shared calendar of bioscience events in Warsaw that anyone can add to. Over the years the club has also run journal clubs, an RNA mini-symposium, a two-week mini-course and an outing to an exhibition.</p>
-        <p><a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club Warsaw</a> started in 2016 as a spin-off of Do Science! and restarts in October 2026 as a monthly series on the Ochota Campus.</p>
-      </div>
-    </div>
   </section>
 
   <section id="news" aria-labelledby="news-h">
     <p class="eyebrow">News</p>
     <h2 id="news-h">Latest</h2>
-    <article class="post feature">
-      <img class="pic" src="assets/galej.webp" alt="Wojtek Galej" width="269" height="303" loading="lazy">
-      <div class="body">
-        <time datetime="2026-10-30">30 October 2026</time>
-        <h3>First meeting of the relaunch: Wojtek Galej, Thursday 5 November</h3>
-        <p>We start the new season with <b>Wojtek Galej</b> (IIMCB), a structural biologist who studies RNA–protein complexes and RNA splicing. After 17 years of research abroad, and as an ERC Consolidator Grant recipient, he is returning to Warsaw to lead the new Laboratory of RNA Splicing at IIMCB, supported by the NAWA Polish Returns programme. There he will develop cryo-electron tomography (cryo-ET) to see molecular machines inside cells, with IIMCB the first centre in Poland to bring this method in.</p>
-        <p><b>Thursday, 5 November 2026</b><br>
-        <b>18:00</b> Lecture: <q>The Significant Other: Structural Studies of the Spliceosome’s Long-Separated Twin</q>. CeNT, Banacha 2C, room 00.187. Enter CeNT, walk into the main hall with the trees and turn right; the room is on the ground floor.<br>
-        <b>19:00</b> Discussion and career advice<br>
-        <b>20:00</b> Drinks and chat at Jeleń na Rykowisku, Grójecka 118</p>
-      </div>
-    </article>
     <article class="post">
       <time datetime="2026-09-29">29 September 2026</time>
       <h3>We are relaunching Do Science! in Warsaw, and we need organisers</h3>
@@ -236,10 +219,17 @@ html{scroll-behavior:smooth}
       </div>
     </div>
 
-    <div class="next">
-      <p class="eyebrow">Next lecture</p>
-      <p class="date">Thu 5 November 2026, 18:00</p>
-      <p><b>Wojtek Galej</b> (IIMCB): <q>The Significant Other: Structural Studies of the Spliceosome’s Long-Separated Twin</q>. CeNT, Banacha 2C, room 00.187. Drinks afterwards at Jeleń na Rykowisku, Grójecka 118. <a href="#news">Details in the news</a>.</p>
+    <div class="next feature">
+      <img class="pic" src="assets/galej.webp" alt="Wojtek Galej" width="269" height="303" loading="lazy">
+      <div class="body">
+        <p class="eyebrow">Next lecture</p>
+        <p class="date">Thu 5 November 2026, 18:00</p>
+        <p><b>Wojtek Galej</b> (IIMCB) is a structural biologist who studies RNA–protein complexes and RNA splicing. After 17 years of research abroad, and as an ERC Consolidator Grant recipient, he is returning to Warsaw to lead the new Laboratory of RNA Splicing at IIMCB, supported by the NAWA Polish Returns programme. There he will develop cryo-electron tomography (cryo-ET) to see molecular machines inside cells, with IIMCB the first centre in Poland to bring this method in.</p>
+        <p><b>18:00</b> Lecture: <q>The Significant Other: Structural Studies of the Spliceosome’s Long-Separated Twin</q>. CeNT, Banacha 2C, room 00.187. Enter CeNT, walk into the main hall with the trees and turn right; the room is on the ground floor.<br>
+        <b>19:00</b> Discussion and career advice<br>
+        <b>20:00</b> Drinks and chat at Jeleń na Rykowisku, Grójecka 118</p>
+        <p><a class="btn" href="https://forms.gle/DcBHLf39ymTcvY917" target="_blank" rel="noopener">Register for the 5 November lecture →</a></p>
+      </div>
     </div>
   </section>
 
@@ -331,6 +321,7 @@ html{scroll-behavior:smooth}
   <footer>
     <p><b>Do Science!</b> · lectures and informal discussions with excellent scientists · Warsaw</p>
     <p>Previous site: <a href="https://doscience.iimcb.gov.pl" target="_blank" rel="noopener">doscience.iimcb.gov.pl</a> · Sister initiative: <a href="https://rna-club-warsaw.org/" target="_blank" rel="noopener">RNA Club Warsaw</a></p>
+    <p>Follow us: <a href="https://www.instagram.com/dosciencewarsaw/" target="_blank" rel="noopener">Instagram @dosciencewarsaw</a> · <a href="https://www.facebook.com/DoScience" target="_blank" rel="noopener">Facebook</a></p>
   </footer>
 </div>
 
