@@ -71,6 +71,7 @@ section{padding-block:48px;border-top:1px solid var(--line);display:grid;gap:24p
 .post{display:grid;gap:12px;max-width:68ch}.post time{font-family:var(--mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}.post h3{font-family:var(--display);font-size:1.35rem;line-height:1.25;margin:0;letter-spacing:-.01em}.post p{margin:0}
 .next.feature{grid-template-columns:150px 1fr;gap:12px 24px;align-items:start}.next.feature .body{display:grid;gap:12px}.next.feature .pic{width:100%;height:auto;border-radius:14px;border:1px solid var(--line)}@media (max-width:620px){.next.feature{grid-template-columns:1fr}.next.feature .pic{max-width:160px}}
 .btn{display:inline-block;background:var(--ink);color:var(--yellow);text-decoration:none;font-weight:600;padding:10px 18px;border-radius:999px}.btn:hover{background:#000;color:var(--yellow);box-shadow:0 0 0 3px var(--yellow)}
+.calendar iframe{display:block;width:100%;height:600px;border:1px solid var(--line);border-radius:14px;background:#fff}@media (max-width:620px){.calendar iframe{height:520px}}
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
 .cols>*{min-width:0}
 .prose{display:grid;gap:14px;max-width:65ch}
@@ -272,25 +273,29 @@ html{scroll-behavior:smooth}
   <section id="scievents" aria-labelledby="sci-h">
     <p class="eyebrow">SciEvents</p>
     <h2 id="sci-h">Bioscience in Warsaw, in one calendar</h2>
-    <p class="note">SciEvents is a community calendar of seminars, lectures, workshops and conferences across Warsaw's life-science institutes. Anyone can subscribe, and anyone can send in an event.</p>
+    <p class="note">SciEvents is a community-driven, shared calendar of scientific events in bioscience organized in Warsaw. Read the <a href="https://docs.google.com/document/d/1UIlX3ul_2_SkJtBN_lrSBsUPTRVv33S3WiAkpPy4eIs/edit#heading=h.li9a2zlfa6c8" target="_blank" rel="noopener">FAQ</a> about the project. Want to add your event, or join the team adding events of others? Go to the <a href="https://docs.google.com/spreadsheets/d/13igbxsGVSmN2QcWsNDHlQ25nW_anTNEVjlDpxWinTSI/edit#gid=0" target="_blank" rel="noopener">volunteers sheet</a> or e-mail <a href="mailto:doscience.iimcb@gmail.com">doscience.iimcb@gmail.com</a>.</p>
+    <div class="calendar">
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=doscience.iimcb%40gmail.com&amp;color=%23BE6D00&amp;ctz=Europe%2FWarsaw" title="SciEvents calendar, Warsaw" loading="lazy"></iframe>
+    </div>
     <div class="channels">
       <div class="ch">
-        <span class="role">Subscribe by email</span>
-        <h3>Mailing list</h3>
-        <p class="note">Send an empty email to this address to join the Google Group.</p>
+        <span class="role">One e-mail per week</span>
+        <h3>Weekly digest</h3>
+        <p class="note">To get a list of events once a week, subscribe to the <a href="https://groups.google.com/forum/#!forum/do-science-scievents" target="_blank" rel="noopener">Google Group</a> by sending an empty email to this address.</p>
         <div class="addr"><code>do-science-scievents+subscribe@googlegroups.com</code><button class="copy" type="button" data-copy="do-science-scievents+subscribe@googlegroups.com">Copy</button></div>
+        <p class="note">To unsubscribe, send an email to <a href="mailto:do-science-scievents+unsubscribe@googlegroups.com">do-science-scievents+unsubscribe@googlegroups.com</a>.</p>
       </div>
       <div class="ch">
         <span class="role">Add an event</span>
         <h3>SciEvents inbox</h3>
         <p class="note">Send the title, date, time, place and a link. We add it to the shared calendar.</p>
-        <div class="addr"><code>m.magnus@cent.uw.edu.pl</code><button class="copy" type="button" data-copy="m.magnus@cent.uw.edu.pl">Copy</button></div>
+        <div class="addr"><code>doscience.iimcb@gmail.com</code><button class="copy" type="button" data-copy="doscience.iimcb@gmail.com">Copy</button></div>
       </div>
       <div class="ch">
         <span class="role">Calendar and news</span>
-        <h3>Google Calendar and Facebook</h3>
-        <p class="note">The calendar has an iCal export for Outlook or Apple Calendar. Announcements go out on Facebook.</p>
-        <p><a href="https://doscience.iimcb.gov.pl" target="_blank" rel="noopener">Calendar on the current site</a><br><a href="https://www.facebook.com/DoScience" target="_blank" rel="noopener">facebook.com/DoScience</a></p>
+        <h3>iCal and Facebook</h3>
+        <p class="note">Add the calendar to Outlook, Apple Calendar or Google Calendar with the iCal feed. Announcements go out on Facebook and Instagram.</p>
+        <p><a href="https://calendar.google.com/calendar/ical/doscience.iimcb%40gmail.com/public/basic.ics" target="_blank" rel="noopener">iCal feed</a><br><a href="https://www.facebook.com/DoScience" target="_blank" rel="noopener">facebook.com/DoScience</a><br><a href="https://www.instagram.com/dosciencewarsaw/" target="_blank" rel="noopener">Instagram @dosciencewarsaw</a></p>
       </div>
     </div>
   </section>
